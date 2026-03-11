@@ -204,6 +204,13 @@ a:focus-visible {
 	padding: var(--page-padding);
 }
 
+.content--compact {
+	min-height: 40dvh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .content--full {
 	display: grid;
 	height: 100vh;
@@ -439,4 +446,53 @@ a:focus-visible {
 	.page-footer {
 		grid-template-columns: repeat(3,auto);
 	}
+}
+
+/* Service radio buttons */
+.service-radio {
+	display: none;
+}
+
+.service-label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.65rem 1.25rem;
+	border: 1px solid rgba(245, 245, 245, 0.2);
+	cursor: pointer;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	transition: all 0.3s ease;
+	color: rgba(245, 245, 245, 0.6);
+}
+
+.service-label:hover {
+	border-color: rgba(245, 245, 245, 0.5);
+	color: #f5f5f5;
+}
+
+.service-radio:checked + .service-label {
+	background: #f5f5f5;
+	color: #0a0a0a;
+	border-color: #f5f5f5;
+}
+
+/* Date & time picker styling */
+input[type="date"],
+input[type="time"] {
+	color-scheme: dark;
+	font-family: var(--font-sans);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+	opacity: 1;
 }
