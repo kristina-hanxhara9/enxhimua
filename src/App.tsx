@@ -440,9 +440,9 @@ export default function App() {
         <span className="frame__logo">EM</span>
       </header>
 
-      <section className="content content--padded">
+      <section className="content content--padded content--compact">
         <h4 className="type-tiny">Intro</h4>
-        <p className="content__text">Welcome to enxhithemuaa's makeup artistry portfolio. In a world dominated by speed and constant motion, enxhithemuaa's artistry invites you to slow down and immerse yourself in a visual experience that touches human beauty.</p>
+        <p className="content__text">Immerse yourself in a visual experience that celebrates human beauty through enxhithemuaa's artistry.</p>
       </section>
 
       <section className="content content--full content--padded">
@@ -457,9 +457,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className="content content--padded">
+      <section className="content content--padded content--compact">
         <h4 className="type-tiny">About</h4>
-        <p className="content__text">Her brush captures the quiet ache of reality, where shadow and light blur the line between seen and felt. Soft, muted tones breathe life into the ordinary, revealing the sensual curves and fragile textures hidden in plain sight. Each look lingers in the tension of what’s almost forgotten, where touch and absence coexist. There’s no rush, no spectacle—just the raw, intimate beauty of life unfolding in quiet moments. Light grazes skin, shadows hold secrets, and the world feels both distant and deeply near.</p>
+        <p className="content__text">Shadow and light blur the line between seen and felt. Soft, muted tones reveal the beauty hidden in plain sight—raw, intimate, and timeless.</p>
       </section>
 
       <section className="content content--padded">
@@ -482,9 +482,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className="content content--padded">
+      <section className="content content--padded content--compact">
         <h4 className="type-tiny">Journey</h4>
-        <p className="content__text">Enxhi grew up attuned to the gentle interplay of light and shadow in the city’s quieter corners. Her eye was drawn to the unnoticed beauty in the mundane, the softness in the grit. She relocated to London, where the hazy sunlight, muted colors, and sprawling landscapes deepened her introspective approach to art. There, she found inspiration in the delicate moments between movement and stillness, capturing the fleeting, sensual beauty of everyday life in a way that feels both intimate and timeless.</p>
+        <p className="content__text">From quiet city corners to London’s hazy light—Enxhi captures the fleeting beauty of everyday life with an intimate, timeless touch.</p>
       </section>
 
       <section className="content content--padded content--full">
@@ -503,9 +503,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className="content content--padded">
+      <section className="content content--padded content--compact">
         <h4 className="type-tiny">Work Ethics</h4>
-        <p className="content__text">Driven by a strong sense of discipline and dedication, her work ethic reflects a deep commitment to both her craft and personal growth. With a relentless focus on innovation, she consistently seeks to push the boundaries of her creativity, drawing inspiration from the diverse environments that have shaped her artistic journey. Each project is approached with meticulous attention to detail, often requiring long hours and unwavering determination to achieve the desired result.</p>
+        <p className="content__text">Meticulous attention to detail and unwavering dedication. Every project pushes creative boundaries with discipline and passion.</p>
       </section>
 
       <section className="content content--padded content--full">
@@ -524,9 +524,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className="content content--padded">
+      <section className="content content--padded content--compact">
         <h4 className="type-tiny">Inspiration</h4>
-        <p className="content__text">Enxhi draws inspiration from the quiet, in-between moments of everyday life—the fleeting light at dawn, the subtle movement of shadows, the way stillness can carry untold stories. She’s moved by the fragility of human existence, finding beauty in imperfection and transience. Nature plays a role too, but not in grand landscapes—rather, in the soft, textured layers of light filtering through a window or the delicate detail of wind stirring leaves.</p>
+        <p className="content__text">Drawn to fleeting light, quiet moments, and the beauty found in imperfection and transience.</p>
       </section>
 
       <section className="content content--padded content--full">
@@ -541,9 +541,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className="content content--padded" id="studio">
+      <section className="content content--padded content--compact" id="studio">
         <h4 className="type-tiny">Our Studio</h4>
-        <p className="content__text">The creative process begins with stillness and observation, letting the moment speak before any action is taken. It’s about immersing in the environment, feeling the quiet shifts in light, texture, and mood. Rather than forcing a scene, there’s a deep patience—waiting for the right interplay of shadow or the soft touch of light on a surface.</p>
+        <p className="content__text">Where stillness meets creativity. A space of patience, light, and quiet observation.</p>
       </section>
 
       <section className="content content--full content--cutoff">
@@ -558,9 +558,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className="content content--padded">
+      <section className="content content--padded content--compact">
         <h4 className="type-tiny">Collaborations</h4>
-        <p className="content__text">Known for her openness to new ideas and innovative approaches, Enxhi thrives on the energy that comes from working with fellow artists, designers, and creative professionals. By blending unique perspectives and exploring diverse techniques, collaborations with Enxhi result in work that pushes artistic boundaries and connects with a wider audience.</p>
+        <p className="content__text">Blending perspectives with fellow artists and designers to push creative boundaries.</p>
       </section>
 
       <section className="content content--full content--padded">
@@ -616,9 +616,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className="content content--padded">
+      <section className="content content--padded content--compact">
         <h4 className="type-tiny">Style</h4>
-        <p className="content__text">Her style is rooted in subtlety and restraint, capturing the delicate balance between light and shadow, presence and absence. She gravitates toward muted, natural tones that evoke a sense of quiet intimacy, favoring soft textures and a timeless, understated aesthetic. There’s a rawness in her work, yet it never feels harsh—rather, it reveals the fragility and beauty found in life’s simplest moments.</p>
+        <p className="content__text">Rooted in subtlety—muted tones, soft textures, and a timeless, understated aesthetic.</p>
       </section>
 
       <section className="content content--full">
@@ -629,9 +629,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className="content content--padded">
+      <section className="content content--padded content--compact">
         <h4 className="type-tiny">Future</h4>
-        <p className="content__text">Looking ahead, Enxhi envisions her work diving deeper into the exploration of intimacy and impermanence. She’s drawn to the idea of capturing moments that feel almost invisible—those fleeting seconds between stillness and motion, light and shadow. In the future, she hopes to experiment more with multimedia projects, blending photography with film and sound to create immersive, sensory experiences that evoke emotion beyond the frame.</p>
+        <p className="content__text">Exploring intimacy and impermanence through immersive, sensory experiences beyond the frame.</p>
       </section>
 
       <section className="content content--full">
@@ -649,42 +649,66 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
                   placeholder="Your full name"
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Email</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
                   placeholder="your@email.com"
                 />
               </div>
             </div>
-            
-            <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Service</label>
-              <select className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors appearance-none rounded-none">
-                <option value="" className="bg-[#0a0a0a]">Select a service</option>
-                <option value="bridal" className="bg-[#0a0a0a]">Bridal Makeup</option>
-                <option value="event" className="bg-[#0a0a0a]">Special Event</option>
-                <option value="editorial" className="bg-[#0a0a0a]">Editorial / Fashion</option>
-                <option value="lesson" className="bg-[#0a0a0a]">1-on-1 Lesson</option>
-              </select>
+
+            <div className="space-y-3">
+              <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Select a Service</label>
+              <div className="flex flex-wrap gap-3">
+                <input type="radio" name="service" id="bridal" value="bridal" className="service-radio" />
+                <label htmlFor="bridal" className="service-label">Bridal Makeup</label>
+
+                <input type="radio" name="service" id="event" value="event" className="service-radio" />
+                <label htmlFor="event" className="service-label">Special Event</label>
+
+                <input type="radio" name="service" id="editorial" value="editorial" className="service-radio" />
+                <label htmlFor="editorial" className="service-label">Editorial / Fashion</label>
+
+                <input type="radio" name="service" id="lesson" value="lesson" className="service-radio" />
+                <label htmlFor="lesson" className="service-label">1-on-1 Lesson</label>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Date</label>
+                <input
+                  type="date"
+                  className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Time</label>
+                <input
+                  type="time"
+                  className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
+                />
+              </div>
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Date & Time</label>
-              <input 
-                type="datetime-local" 
-                className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none [color-scheme:dark]"
+              <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Message</label>
+              <textarea
+                rows={4}
+                className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none resize-none"
+                placeholder="Tell us about your vision or any special requests..."
               />
             </div>
 
-            <button 
+            <button
               type="submit"
               className="mt-8 px-8 py-4 border border-[#f5f5f5]/20 text-sm uppercase tracking-widest hover:bg-[#f5f5f5] hover:text-[#0a0a0a] transition-colors duration-300"
             >
