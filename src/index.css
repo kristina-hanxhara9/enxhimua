@@ -412,9 +412,71 @@ a:focus-visible {
 
 @media (max-aspect-ratio: 16/9) {
   .grid:not(.grid--zoomed) {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
     aspect-ratio: 16/9;
+  }
+}
+
+/* Mobile-friendly grids and animations */
+@media screen and (max-width: 52.99em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: 1fr;
+  }
+
+  .grid--small {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .grid--tiny {
+    grid-template-columns: repeat(4, 1fr) !important;
+    height: 50vh;
+  }
+
+  .grid--wide {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .grid--column {
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 6px;
+  }
+
+  .grid--zoomed {
+    grid-template-columns: repeat(2, 80%) !important;
+    grid-template-rows: repeat(2, 60%);
+    gap: 0.5rem;
+  }
+
+  .grid--columns {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .grid:not(.grid--zoomed) {
+    aspect-ratio: auto !important;
+  }
+
+  .content--full {
+    height: auto;
+    min-height: 80vh;
+  }
+
+  .span-2 {
+    grid-column: auto / span 1;
+  }
+
+  .span-3 {
+    grid-column: auto / span 2;
+  }
+
+  .content__text {
+    font-size: 1.3rem;
+  }
+
+  .page-footer {
+    margin-top: 20vh;
   }
 }
 
