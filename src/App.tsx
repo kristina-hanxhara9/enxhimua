@@ -6,8 +6,6 @@ import Lenis from 'lenis';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const isMobile = () => window.innerWidth < 848;
-
 const images = [
   'https://images.pexels.com/photos/3912572/pexels-photo-3912572.jpeg',
   'https://images.pexels.com/photos/1722868/pexels-photo-1722868.jpeg',
@@ -25,16 +23,11 @@ const studioImages = [
 const getImg = (index: number) => images[index % images.length];
 const getStudioImg = (index: number) => studioImages[index % studioImages.length];
 
-const calculateInitialTransform = (element: Element, offsetDistance = 250, maxRotation = 300, maxZTranslation = 2000): { x: number; y: number; z: number; rotateX: number; rotateY: number } => {
-  if (isMobile()) {
-    offsetDistance *= 0.4;
-    maxRotation *= 0.3;
-    maxZTranslation *= 0.3;
-  }
+const calculateInitialTransform = (element: Element, offsetDistance = 250, maxRotation = 300, maxZTranslation = 2000) => {
   const viewportCenter = { width: window.innerWidth / 2, height: window.innerHeight / 2 };
-  const elementCenter = { 
-    x: (element as HTMLElement).offsetLeft + (element as HTMLElement).offsetWidth / 2, 
-    y: (element as HTMLElement).offsetTop + (element as HTMLElement).offsetHeight / 2 
+  const elementCenter = {
+    x: (element as HTMLElement).offsetLeft + (element as HTMLElement).offsetWidth / 2,
+    y: (element as HTMLElement).offsetTop + (element as HTMLElement).offsetHeight / 2
   };
 
   const angle = Math.atan2(Math.abs(viewportCenter.height - elementCenter.y), Math.abs(viewportCenter.width - elementCenter.x));
@@ -57,19 +50,8 @@ const calculateInitialTransform = (element: Element, offsetDistance = 250, maxRo
   };
 };
 
-const useIsMobile = () => {
-  const [mobile, setMobile] = React.useState(isMobile());
-  useEffect(() => {
-    const handler = () => setMobile(isMobile());
-    window.addEventListener('resize', handler);
-    return () => window.removeEventListener('resize', handler);
-  }, []);
-  return mobile;
-};
-
 export default function App() {
   const container = useRef<HTMLDivElement>(null);
-  const mobile = useIsMobile();
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -93,7 +75,7 @@ export default function App() {
 
   useGSAP(() => {
     // Frame animation
-    const frame = document.querySelector('.frame'); 
+    const frame = document.querySelector('.frame');
     const frameTitle = frame?.querySelector('.frame__title');
 
     if (frame && frameTitle) {
@@ -101,7 +83,7 @@ export default function App() {
         defaults: { ease: 'none' },
         scrollTrigger: {
           trigger: frame,
-          start: 'clamp(top bottom)', 
+          start: 'clamp(top bottom)',
           end: 'bottom top',
           scrub: true
         }
@@ -121,20 +103,19 @@ export default function App() {
     const grid1 = document.querySelector('[data-grid-first]');
     if (grid1) {
       const gridImages = grid1.querySelectorAll('.grid__img');
-      const mobile = isMobile();
       gsap.timeline({
         defaults: { ease: 'sine' },
         scrollTrigger: {
           trigger: grid1,
           start: 'center center',
-          end: mobile ? '+=150%' : '+=250%',
+          end: '+=250%',
           pin: grid1.parentNode as Element,
           scrub: 0.5,
         }
       })
       .from(gridImages, {
-        stagger: mobile ? 0.04 : 0.07,
-        y: () => gsap.utils.random(window.innerHeight * (mobile ? 0.5 : 1), window.innerHeight * (mobile ? 0.8 : 1.8))
+        stagger: 0.07,
+        y: () => gsap.utils.random(window.innerHeight, window.innerHeight * 1.8)
       })
       .from(grid1.parentNode?.querySelector('.content__title') as Element, {
         duration: 1.2,
@@ -149,20 +130,19 @@ export default function App() {
     if (grid2) {
       const gridImages = grid2.querySelectorAll('.grid__img');
       const middleIndex = Math.floor(gridImages.length / 2);
-      const mobile2 = isMobile();
       gsap.timeline({
         defaults: { ease: 'power3' },
         scrollTrigger: {
           trigger: grid2,
           start: 'center center',
-          end: mobile2 ? '+=150%' : '+=250%',
+          end: '+=250%',
           pin: grid2.parentNode as Element,
           scrub: 0.5,
         }
       })
       .from(gridImages, {
         stagger: { amount: 0.3, from: 'center' },
-        y: window.innerHeight * (mobile2 ? 0.5 : 1),
+        y: window.innerHeight,
         transformOrigin: '50% 0%',
         rotation: pos => {
           const distanceFromCenter = Math.abs(pos - middleIndex);
@@ -180,20 +160,19 @@ export default function App() {
     const grid3 = document.querySelector('[data-grid-third]');
     if (grid3) {
       const gridImages = grid3.querySelectorAll('.grid__img');
-      const mobile3 = isMobile();
       gsap.timeline({
         defaults: { ease: 'power3' },
         scrollTrigger: {
           trigger: grid3,
           start: 'center center',
-          end: mobile3 ? '+=130%' : '+=200%',
+          end: '+=200%',
           pin: grid3.parentNode as Element,
           scrub: 0.2,
         }
       })
       .from(gridImages, {
         stagger: 0.06,
-        y: window.innerHeight * (mobile3 ? 0.5 : 1),
+        y: window.innerHeight,
         rotation: () => gsap.utils.random(-15,15),
         transformOrigin: '50% 0%'
       })
@@ -214,18 +193,17 @@ export default function App() {
     const grid4 = document.querySelector('[data-grid-fourth]');
     if (grid4) {
       const gridImages = grid4.querySelectorAll('.grid__img');
-      const mobile4 = isMobile();
       gsap.timeline({
         defaults: { ease: 'expo' },
         scrollTrigger: {
           trigger: grid4,
           start: 'center center',
-          end: mobile4 ? '+=130%' : '+=200%',
+          end: '+=200%',
           pin: grid4.parentNode as Element,
           scrub: 0.2,
         }
       })
-      .set(grid4, {perspective: mobile4 ? 500 : 1000})
+      .set(grid4, {perspective: 1000})
       .fromTo(gridImages, {
         x: (_, el) => calculateInitialTransform(el).x,
         y: (_, el) => calculateInitialTransform(el).y,
@@ -254,18 +232,17 @@ export default function App() {
     const grid4v2 = document.querySelector('[data-grid-fourth-v2]');
     if (grid4v2) {
       const gridImages = grid4v2.querySelectorAll('.grid__img');
-      const mobile4v2 = isMobile();
       gsap.timeline({
         defaults: { ease: 'power4' },
         scrollTrigger: {
           trigger: grid4v2,
           start: 'center center',
-          end: mobile4v2 ? '+=130%' : '+=200%',
+          end: '+=200%',
           pin: grid4v2.parentNode as Element,
           scrub: 0.2,
         }
       })
-      .set(grid4v2, {perspective: mobile4v2 ? 600 : 1200})
+      .set(grid4v2, {perspective: 1200})
       .fromTo(gridImages, {
         x: (_, el) => calculateInitialTransform(el, 900).x,
         y: (_, el) => calculateInitialTransform(el, 600).y,
@@ -294,28 +271,27 @@ export default function App() {
     const grid5 = document.querySelector('[data-grid-fifth]');
     if (grid5) {
       const gridImages = grid5.querySelectorAll('.grid__img');
-      const mobile5 = isMobile();
       gsap.timeline({
         defaults: { ease: 'sine' },
         scrollTrigger: {
           trigger: grid5,
           start: 'center center',
-          end: mobile5 ? '+=150%' : '+=250%',
+          end: '+=250%',
           pin: grid5.parentNode as Element,
           scrub: 0.3,
         }
       })
-      .set(grid5, {perspective: mobile5 ? 500 : 1000})
+      .set(grid5, {perspective: 1000})
       .from(gridImages, {
         stagger: {
           amount: 0.4,
           from: 'random',
-          grid: mobile5 ? [4,3] : [4,9]
+          grid: [4,9]
         },
-        y: window.innerHeight * (mobile5 ? 0.5 : 1),
-        rotationX: mobile5 ? -30 : -70,
+        y: window.innerHeight,
+        rotationX: -70,
         transformOrigin: '50% 0%',
-        z: mobile5 ? -300 : -900,
+        z: -900,
         autoAlpha: 0
       });
     }
@@ -384,27 +360,26 @@ export default function App() {
     const grid8 = document.querySelector('[data-grid-eighth]');
     if (grid8) {
       const gridImages = grid8.querySelectorAll('.grid__img');
-      const mobile8 = isMobile();
       gsap.timeline({
         defaults: { ease: 'expo' },
         scrollTrigger: {
           trigger: grid8,
           start: 'center center',
-          end: mobile8 ? '+=150%' : '+=250%',
+          end: '+=250%',
           pin: grid8.parentNode as Element,
           scrub: true,
         }
       })
-      .set(grid8, {perspective: mobile8 ? 800 : 2000})
+      .set(grid8, {perspective: 2000})
       .from(gridImages, {
         stagger: {
           amount: 0.8,
           from: 'start'
         },
-        rotationY: mobile8 ? 30 : 65,
+        rotationY: 65,
         transformOrigin: '0% 50%',
-        z: mobile8 ? -80 : -200,
-        yPercent: 10 
+        z: -200,
+        yPercent: 10
       })
       .from(gridImages, {
         stagger: {
@@ -453,14 +428,14 @@ export default function App() {
       <header className="frame">
         <h2 className="frame__title">enxhithemuaa</h2>
         <div className="frame__subline type-tiny">
-          <span>Make-up artist</span> 
+          <span>Make-up artist</span>
           <nav className="frame__links flex-line">
             <a href="#book">Book an Appointment</a>
             <a href="#studio">Our Studio</a>
           </nav>
         </div>
         <nav className="frame__tags flex-line type-tiny">
-          <span>📍London Pro Makeup & Hair Artist | Bridal</span>
+          <span>London Pro Makeup & Hair Artist | Bridal</span>
         </nav>
         <span className="frame__logo">EM</span>
       </header>
@@ -472,7 +447,7 @@ export default function App() {
 
       <section className="content content--full content--padded">
         <div className="grid grid--spaced" data-grid-first>
-          {[...Array(mobile ? 9 : 17)].map((_, i) => (
+          {[...Array(17)].map((_, i) => (
             <div key={i} className={`grid__img pos-${i + 1}`} style={{ backgroundImage: `url(${getImg(i)})` }}></div>
           ))}
         </div>
@@ -509,7 +484,7 @@ export default function App() {
 
       <section className="content content--padded content--compact">
         <h4 className="type-tiny">Journey</h4>
-        <p className="content__text">From quiet city corners to London’s hazy light—Enxhi captures the fleeting beauty of everyday life with an intimate, timeless touch.</p>
+        <p className="content__text">From quiet city corners to London's hazy light—Enxhi captures the fleeting beauty of everyday life with an intimate, timeless touch.</p>
       </section>
 
       <section className="content content--padded content--full">
@@ -519,7 +494,7 @@ export default function App() {
           ))}
           <div className="grid__item acenter pos-1">
             <h4 className="type-tiny">Craft</h4>
-            <p>Her craft reveals the quiet beauty in life’s fleeting moments.</p>
+            <p>Her craft reveals the quiet beauty in life's fleeting moments.</p>
           </div>
           <div className="grid__item acenter pos-4">
             <h4 className="type-tiny">Perspective</h4>
@@ -535,7 +510,7 @@ export default function App() {
 
       <section className="content content--padded content--full">
         <div className="grid grid--spaced grid--small" data-grid-fourth>
-          {[...Array(mobile ? 12 : 36)].map((_, i) => (
+          {[...Array(36)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i)})` }}></div>
           ))}
         </div>
@@ -543,7 +518,7 @@ export default function App() {
 
       <section className="content content--full">
         <div className="grid grid--small" data-grid-fourth-v2>
-          {[...Array(mobile ? 12 : 36)].map((_, i) => (
+          {[...Array(36)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i + 3)})` }}></div>
           ))}
         </div>
@@ -556,7 +531,7 @@ export default function App() {
 
       <section className="content content--padded content--full">
         <div className="grid grid--spaced grid--wide" data-grid-fifth>
-          {[...Array(mobile ? 9 : 20)].map((_, i) => (
+          {[...Array(20)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i + 1)})` }}></div>
           ))}
         </div>
@@ -648,7 +623,7 @@ export default function App() {
 
       <section className="content content--full">
         <div className="grid grid--tiny" data-grid-eighth>
-          {[...Array(mobile ? 12 : 36)].map((_, i) => (
+          {[...Array(36)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i + 2)})` }}></div>
           ))}
         </div>
