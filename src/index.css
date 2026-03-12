@@ -487,11 +487,19 @@ input[type="time"] {
 
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
-	opacity: 0.5;
+	opacity: 0.4;
 	cursor: pointer;
+	padding: 4px;
+	border-radius: 4px;
+	transition: all 0.2s ease;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator:hover,
 input[type="time"]::-webkit-calendar-picker-indicator:hover {
-	opacity: 1;
+	opacity: 0.8;
+	background-color: rgba(139, 94, 94, 0.1);
+}
+
+.service-label {
+	border-radius: 9999px;
 }
