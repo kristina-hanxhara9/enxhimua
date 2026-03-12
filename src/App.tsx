@@ -92,7 +92,7 @@ export default function App() {
         yPercent: 35,
         scale: 0.95,
         startAt: { filter: 'brightness(100%)' },
-        filter: 'brightness(30%)'
+        filter: 'brightness(70%)'
       })
       .to(frameTitle, {
         xPercent: -80
@@ -424,7 +424,7 @@ export default function App() {
   }, { scope: container });
 
   return (
-    <main ref={container} className="bg-[#0a0a0a] text-[#f5f5f5]">
+    <main ref={container} className="bg-[#f5e1e0] text-[#3d2b2b]">
       <header className="frame">
         <h2 className="frame__title">enxhithemuaa</h2>
         <div className="frame__subline type-tiny">
@@ -648,25 +648,25 @@ export default function App() {
           <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Name</label>
+                <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Name</label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
+                  className="w-full bg-transparent border-b border-[#3d2b2b]/20 pb-2 text-[#3d2b2b] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
                   placeholder="Your full name"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Email</label>
+                <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Email</label>
                 <input
                   type="email"
-                  className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
+                  className="w-full bg-transparent border-b border-[#3d2b2b]/20 pb-2 text-[#3d2b2b] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
                   placeholder="your@email.com"
                 />
               </div>
             </div>
 
             <div className="space-y-3">
-              <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Select a Service</label>
+              <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Select a Service</label>
               <div className="flex flex-wrap gap-3">
                 <input type="radio" name="service" id="bridal" value="bridal" className="service-radio" />
                 <label htmlFor="bridal" className="service-label">Bridal Makeup</label>
@@ -684,33 +684,33 @@ export default function App() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Date</label>
+                <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Date</label>
                 <input
                   type="date"
-                  className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
+                  className="w-full bg-transparent border-b border-[#3d2b2b]/20 pb-2 text-[#3d2b2b] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Time</label>
+                <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Time</label>
                 <input
                   type="time"
-                  className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
+                  className="w-full bg-transparent border-b border-[#3d2b2b]/20 pb-2 text-[#3d2b2b] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs uppercase tracking-widest text-[#f5f5f5]/60">Message</label>
+              <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Message</label>
               <textarea
                 rows={4}
-                className="w-full bg-transparent border-b border-[#f5f5f5]/20 pb-2 text-[#f5f5f5] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none resize-none"
+                className="w-full bg-transparent border-b border-[#3d2b2b]/20 pb-2 text-[#3d2b2b] focus:outline-none focus:border-[#f5f5f5] transition-colors rounded-none resize-none"
                 placeholder="Tell us about your vision or any special requests..."
               />
             </div>
 
             <button
               type="submit"
-              className="mt-8 px-8 py-4 border border-[#f5f5f5]/20 text-sm uppercase tracking-widest hover:bg-[#f5f5f5] hover:text-[#0a0a0a] transition-colors duration-300"
+              className="mt-8 px-8 py-4 border border-[#3d2b2b]/20 text-sm uppercase tracking-widest hover:bg-[#3d2b2b] hover:text-[#f5e1e0] transition-colors duration-300"
             >
               Request Booking
             </button>
