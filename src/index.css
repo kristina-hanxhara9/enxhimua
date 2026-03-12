@@ -14,15 +14,15 @@
 
 :root {
 	font-size: 16px;
-  --color-text: #f5f3ee;
-  --color-bg: #0a0a0a;
-  --color-link: #ffffff;
-  --color-link-hover: #ffffff;
+  --color-text: #3d2b2b;
+  --color-bg: #f5e1e0;
+  --color-link: #8b5e5e;
+  --color-link-hover: #6b3a3a;
 	--page-padding: 0.5rem;
 	--grid-gap: var(--page-padding);
-	--color-bg-content: #0a0a0a;
-	--color-bg-frame: #0a0a0a;
-	--color-border: #46443e;
+	--color-bg-content: #f5e1e0;
+	--color-bg-frame: #f5e1e0;
+	--color-border: #d4b5b0;
 }
 
 html,
@@ -458,36 +458,35 @@ a:focus-visible {
 	align-items: center;
 	justify-content: center;
 	padding: 0.65rem 1.25rem;
-	border: 1px solid rgba(245, 245, 245, 0.2);
+	border: 1px solid rgba(61, 43, 43, 0.2);
 	cursor: pointer;
 	font-size: 0.75rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	transition: all 0.3s ease;
-	color: rgba(245, 245, 245, 0.6);
+	color: rgba(61, 43, 43, 0.6);
 }
 
 .service-label:hover {
-	border-color: rgba(245, 245, 245, 0.5);
-	color: #f5f5f5;
+	border-color: rgba(61, 43, 43, 0.5);
+	color: #3d2b2b;
 }
 
 .service-radio:checked + .service-label {
-	background: #f5f5f5;
-	color: #0a0a0a;
-	border-color: #f5f5f5;
+	background: #3d2b2b;
+	color: #f5e1e0;
+	border-color: #3d2b2b;
 }
 
 /* Date & time picker styling */
 input[type="date"],
 input[type="time"] {
-	color-scheme: dark;
+	color-scheme: light;
 	font-family: var(--font-sans);
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
-	filter: invert(1);
 	opacity: 0.5;
 	cursor: pointer;
 }
