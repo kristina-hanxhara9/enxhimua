@@ -645,13 +645,13 @@ export default function App() {
       <section className="content content--padded" id="book">
         <h4 className="type-tiny">Book an Appointment</h4>
         <div className="mt-6 max-w-2xl">
-          <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <form className="flex flex-col gap-2.5" onSubmit={(e) => e.preventDefault()}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
               <div className="space-y-1">
                 <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Name</label>
                 <input
                   type="text"
-                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all placeholder:text-[#3d2b2b]/30"
+                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-2.5 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all placeholder:text-[#3d2b2b]/30"
                   placeholder="Your full name"
                 />
               </div>
@@ -659,7 +659,7 @@ export default function App() {
                 <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Email</label>
                 <input
                   type="email"
-                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all placeholder:text-[#3d2b2b]/30"
+                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-2.5 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all placeholder:text-[#3d2b2b]/30"
                   placeholder="your@email.com"
                 />
               </div>
@@ -682,20 +682,24 @@ export default function App() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
               <div className="space-y-1">
                 <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Date</label>
-                <input
-                  type="date"
-                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all"
-                />
+                <div className="date-picker-wrapper">
+                  <input
+                    type="date"
+                    className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-2.5 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all"
+                  />
+                </div>
               </div>
               <div className="space-y-1">
                 <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Time</label>
-                <input
-                  type="time"
-                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all"
-                />
+                <div className="time-picker-wrapper">
+                  <input
+                    type="time"
+                    className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-2.5 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all"
+                  />
+                </div>
               </div>
             </div>
 
@@ -703,14 +707,14 @@ export default function App() {
               <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Message</label>
               <textarea
                 rows={3}
-                className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all resize-none placeholder:text-[#3d2b2b]/30"
+                className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-2.5 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all resize-none placeholder:text-[#3d2b2b]/30"
                 placeholder="Tell us about your vision or any special requests..."
               />
             </div>
 
             <button
               type="submit"
-              className="mt-3 px-8 py-3 bg-[#3d2b2b] text-[#f5e1e0] rounded-lg text-sm uppercase tracking-widest hover:bg-[#8b5e5e] transition-colors duration-300"
+              className="mt-2 px-8 py-3 bg-[#3d2b2b] text-[#f5e1e0] rounded-lg text-sm uppercase tracking-widest hover:bg-[#8b5e5e] transition-colors duration-300"
             >
               Request Booking
             </button>

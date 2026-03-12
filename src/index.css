@@ -485,19 +485,53 @@ input[type="time"] {
 	font-family: var(--font-sans);
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="time"]::-webkit-calendar-picker-indicator {
-	opacity: 0.4;
-	cursor: pointer;
-	padding: 4px;
-	border-radius: 4px;
-	transition: all 0.2s ease;
+/* Wrapper for custom picker icon */
+.date-picker-wrapper,
+.time-picker-wrapper {
+	position: relative;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator:hover,
-input[type="time"]::-webkit-calendar-picker-indicator:hover {
-	opacity: 0.8;
-	background-color: rgba(139, 94, 94, 0.1);
+.date-picker-wrapper::after,
+.time-picker-wrapper::after {
+	position: absolute;
+	right: 14px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	color: rgba(61, 43, 43, 0.45);
+	transition: color 0.2s ease;
+}
+
+.date-picker-wrapper::after {
+	content: "📅";
+}
+
+.time-picker-wrapper::after {
+	content: "🕐";
+}
+
+.date-picker-wrapper:hover::after,
+.time-picker-wrapper:hover::after {
+	color: rgba(61, 43, 43, 0.8);
+}
+
+/* Hide the default browser picker icon and use our custom one */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+/* Firefox: style the native picker */
+input[type="date"],
+input[type="time"] {
+	-moz-appearance: textfield;
 }
 
 .service-label {
