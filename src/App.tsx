@@ -645,8 +645,8 @@ export default function App() {
       <section className="content content--padded" id="book">
         <h4 className="type-tiny">Book an Appointment</h4>
         <div className="mt-6 max-w-2xl">
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="space-y-1">
                 <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Name</label>
                 <input
@@ -665,7 +665,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Select a Service</label>
               <div className="flex flex-wrap gap-2">
                 <input type="radio" name="service" id="bridal" value="bridal" className="service-radio" />
@@ -682,19 +682,19 @@ export default function App() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="space-y-1">
                 <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Date</label>
                 <input
                   type="date"
-                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all appearance-none"
+                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all"
                 />
               </div>
               <div className="space-y-1">
                 <label className="text-xs uppercase tracking-widest text-[#3d2b2b]/60">Time</label>
                 <input
                   type="time"
-                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all appearance-none"
+                  className="w-full bg-white/40 border border-[#3d2b2b]/15 rounded-lg px-4 py-3 text-[#3d2b2b] focus:outline-none focus:border-[#8b5e5e] focus:ring-1 focus:ring-[#8b5e5e]/30 transition-all"
                 />
               </div>
             </div>
@@ -710,7 +710,7 @@ export default function App() {
 
             <button
               type="submit"
-              className="mt-4 px-8 py-3 bg-[#3d2b2b] text-[#f5e1e0] rounded-lg text-sm uppercase tracking-widest hover:bg-[#8b5e5e] transition-colors duration-300"
+              className="mt-3 px-8 py-3 bg-[#3d2b2b] text-[#f5e1e0] rounded-lg text-sm uppercase tracking-widest hover:bg-[#8b5e5e] transition-colors duration-300"
             >
               Request Booking
             </button>
