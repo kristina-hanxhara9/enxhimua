@@ -426,7 +426,7 @@ export default function App() {
   return (
     <main ref={container} className="bg-[#f5e1e0] text-[#3d2b2b]">
       <header className="frame">
-        <h2 className="frame__title">enxhithemuaa</h2>
+        <h2 className="frame__title">makeupbydoori</h2>
         <div className="frame__subline type-tiny">
           <span>Make-up artist</span>
           <nav className="frame__links flex-line">
@@ -442,7 +442,7 @@ export default function App() {
 
       <section className="content content--padded content--compact">
         <h4 className="type-tiny">Intro</h4>
-        <p className="content__text">Immerse yourself in a visual experience that celebrates human beauty through enxhithemuaa's artistry.</p>
+        <p className="content__text">Immerse yourself in a visual experience that celebrates human beauty through makeupbydoori's artistry.</p>
       </section>
 
       <section className="content content--full content--padded">
@@ -484,7 +484,7 @@ export default function App() {
 
       <section className="content content--padded content--compact">
         <h4 className="type-tiny">Journey</h4>
-        <p className="content__text">From quiet city corners to London's hazy light—Enxhi captures the fleeting beauty of everyday life with an intimate, timeless touch.</p>
+        <p className="content__text">From quiet city corners to London's hazy light—makeupbydoori captures the fleeting beauty of everyday life with an intimate, timeless touch.</p>
       </section>
 
       <section className="content content--padded content--full">
@@ -719,7 +719,7 @@ export default function App() {
       </section>
 
       <footer className="page-footer type-tiny">
-        <span>enxhithemuaa</span>
+        <span>makeupbydoori</span>
         <span>London Pro Makeup & Hair Artist</span>
         <a href="#book">Book an Appointment</a>
       </footer>
