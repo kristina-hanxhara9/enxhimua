@@ -157,7 +157,7 @@ a:focus-visible {
 .frame__title {
 	white-space: nowrap;
   grid-area: title;
-  font-size: clamp(2rem,18vw,20rem);
+  font-size: clamp(2rem,12vw,20rem);
   margin: 0;
   letter-spacing: -0.05em;
   padding-top: 0.15em;
@@ -192,6 +192,7 @@ a:focus-visible {
 .content {
 	position: relative;
 	min-height: 100dvh;
+	overflow: hidden;
 	background: var(--color-bg-content);
 	align-content: center;
 }
@@ -230,7 +231,7 @@ a:focus-visible {
 	letter-spacing: -0.025em;
 }
 
-.grid {
+.photo-grid {
 	grid-area: main;
 	display: grid;
 	width: 100%;
@@ -239,11 +240,11 @@ a:focus-visible {
 	grid-template-rows: 1fr 1fr 1fr;
 }
 
-.grid--spaced {
+.photo-grid--spaced {
 	gap: var(--grid-gap);
 }
 
-.grid--zoomed {
+.photo-grid--zoomed {
 	gap: 2rem;
 	grid-template-columns: repeat(3, 70%);
 	grid-template-rows: repeat(3, 60%);
@@ -252,23 +253,23 @@ a:focus-visible {
 	aspect-ratio: 2 / 1;
 }
 
-.grid--zoomed .grid__img {
+.photo-grid--zoomed .grid__img {
 	width: 100%;
 	height: 100%;
 }
 
-.grid--columns {
+.photo-grid--columns {
   grid-template-columns: repeat(5,1fr);
 	grid-template-rows: repeat(2,min-content);
   align-content: center;
 }
 
-.grid--single {
+.photo-grid--single {
   height: auto;
   justify-self: center;
 }
 
-.grid--column {
+.photo-grid--column {
 	grid-template-columns: repeat(15, calc((100% - 14 * 10px) / 15));
   gap: 10px;
 	grid-template-rows: auto;
@@ -311,18 +312,18 @@ a:focus-visible {
 	grid-column: auto / span 3;
 }
 
-.grid--small {
+.photo-grid--small {
 	grid-template-columns: repeat(9,1fr);
 	grid-auto-rows: 1fr;
 }
 
-.grid--tiny {
+.photo-grid--tiny {
 	height: 60vh;
 	grid-template-columns: repeat(14,1fr);
 	grid-auto-rows: auto;
 }
 
-.grid--wide {
+.photo-grid--wide {
 	grid-template-columns: repeat(5,1fr);
 	grid-template-rows: repeat(4,1fr);
 }
@@ -354,7 +355,7 @@ a:focus-visible {
 	transform: translateZ(0.1px);
 }
 
-.grid--columns .grid__img {
+.photo-grid--columns .grid__img {
 	height: min-content;
 	aspect-ratio: 2 / 3;
 }
@@ -411,7 +412,7 @@ a:focus-visible {
 }
 
 @media (max-aspect-ratio: 16/9) {
-  .grid:not(.grid--zoomed) {
+  .photo-grid:not(.photo-grid--zoomed) {
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;

@@ -446,7 +446,7 @@ export default function App() {
       </section>
 
       <section className="content content--full content--padded">
-        <div className="grid grid--spaced" data-grid-first>
+        <div className="photo-grid photo-grid--spaced" data-grid-first>
           {[...Array(17)].map((_, i) => (
             <div key={i} className={`grid__img pos-${i + 1}`} style={{ backgroundImage: `url(${getImg(i)})` }}></div>
           ))}
@@ -463,7 +463,7 @@ export default function App() {
       </section>
 
       <section className="content content--padded">
-        <div className="grid grid--columns grid--spaced" data-grid-second>
+        <div className="photo-grid photo-grid--columns photo-grid--spaced" data-grid-second>
           {[...Array(5)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i + 2)})` }}></div>
           ))}
@@ -488,7 +488,7 @@ export default function App() {
       </section>
 
       <section className="content content--padded content--full">
-        <div className="grid grid--columns grid--spaced grid--single" data-grid-third>
+        <div className="photo-grid photo-grid--columns photo-grid--spaced photo-grid--single" data-grid-third>
           {[...Array(5)].map((_, i) => (
             <div key={i} className="grid__img pos-2" style={{ backgroundImage: `url(${getImg(i + 4)})` }}></div>
           ))}
@@ -509,7 +509,7 @@ export default function App() {
       </section>
 
       <section className="content content--padded content--full">
-        <div className="grid grid--spaced grid--small" data-grid-fourth>
+        <div className="photo-grid photo-grid--spaced photo-grid--small" data-grid-fourth>
           {[...Array(36)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i)})` }}></div>
           ))}
@@ -517,7 +517,7 @@ export default function App() {
       </section>
 
       <section className="content content--full">
-        <div className="grid grid--small" data-grid-fourth-v2>
+        <div className="photo-grid photo-grid--small" data-grid-fourth-v2>
           {[...Array(36)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i + 3)})` }}></div>
           ))}
@@ -530,7 +530,7 @@ export default function App() {
       </section>
 
       <section className="content content--padded content--full">
-        <div className="grid grid--spaced grid--wide" data-grid-fifth>
+        <div className="photo-grid photo-grid--spaced photo-grid--wide" data-grid-fifth>
           {[...Array(20)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i + 1)})` }}></div>
           ))}
@@ -547,7 +547,7 @@ export default function App() {
       </section>
 
       <section className="content content--full content--cutoff">
-        <div className="grid grid--spaced grid--zoomed" data-grid-sixth>
+        <div className="photo-grid photo-grid--spaced photo-grid--zoomed" data-grid-sixth>
           {[...Array(9)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getStudioImg(i)})` }}></div>
           ))}
@@ -564,7 +564,7 @@ export default function App() {
       </section>
 
       <section className="content content--full content--padded">
-        <div className="grid grid--column" data-grid-seventh>
+        <div className="photo-grid photo-grid--column" data-grid-seventh>
           <div className="grid__item span-3">
                 <h4 className="type-tiny">Opalescent</h4>
                 <p>Their hearts glow softly, bound by a love so pure.</p>
@@ -622,7 +622,7 @@ export default function App() {
       </section>
 
       <section className="content content--full">
-        <div className="grid grid--tiny" data-grid-eighth>
+        <div className="photo-grid photo-grid--tiny" data-grid-eighth>
           {[...Array(36)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i + 2)})` }}></div>
           ))}
@@ -635,7 +635,7 @@ export default function App() {
       </section>
 
       <section className="content content--full">
-        <div className="grid grid--columns" data-grid-ninth>
+        <div className="photo-grid photo-grid--columns" data-grid-ninth>
           {[...Array(5)].map((_, i) => (
             <div key={i} className="grid__img" style={{ backgroundImage: `url(${getImg(i + 4)})` }}></div>
           ))}
